@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+
+  /* HSL Tailored Color Palette */
+  --bg-app: hsl(222, 47%, 7%);
+  --glass-surface: hsla(222, 47%, 11%, 0.5);
+  --glass-border: hsla(222, 47%, 25%, 0.4);
+  --glass-border-focus: hsla(200, 100%, 50%, 0.6);
+  
+  --primary: hsl(256, 100%, 67%);      /* Rich Indigo */
+  --primary-glow: hsla(256, 100%, 67%, 0.35);
+  --secondary: hsl(190, 100%, 45%);    /* Electric Teal */
+  --secondary-glow: hsla(190, 100%, 45%, 0.35);
+  
+  --success: hsl(145, 80%, 45%);       /* Emerald Green */
+  --warning: hsl(38, 95%, 55%);        /* Amber Orange */
+  --danger: hsl(355, 90%, 60%);        /* Crimson Red */
+  
+  --text-primary: hsl(0, 0%, 96%);
+  --text-secondary: hsl(215, 20%, 75%);
+  --text-muted: hsl(215, 15%, 55%);
+  
+  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 30px -10px rgba(0, 0, 0, 0.5), 0 1px 1px rgba(255, 255, 255, 0.05) inset;
+  
+  --transition-fast: 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-app);
+  background-image: 
+    radial-gradient(at 10% 10%, hsla(256, 100%, 67%, 0.15) 0px, transparent 50%),
+    radial-gradient(at 90% 90%, hsla(190, 100%, 45%, 0.15) 0px, transparent 50%);
+  background-attachment: fixed;
+  color: var(--text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* Custom Premium Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-app);
+}
+::-webkit-scrollbar-thumb {
+  background: hsla(222, 47%, 20%, 0.8);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
